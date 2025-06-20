@@ -53,7 +53,6 @@ function App() {
             {theme === 'light' ? <MdDarkMode/> : <MdLightMode/>}
           </button>
 
-          
         <Routes>
           <Route
             path="/"

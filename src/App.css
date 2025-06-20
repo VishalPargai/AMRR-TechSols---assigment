@@ -1,20 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif;
   background: #f4f4f4;
   color: #222;
   transition: background 0.4s ease, color 0.4s ease;
-  font-family: "Poppins", sans-serif;
 }
-
 
 body.dark {
   background: #1e1e1e;
   color: #eaeaea;
 }
-
 
 .navbar {
   display: flex;
@@ -36,7 +34,7 @@ body.dark {
 }
 
 .theme-toggle {
-  position:absolute;
+  position: absolute;
   right: 10px;  
   top: 1px;
   background: transparent;
@@ -52,16 +50,30 @@ body.dark {
   background: #777;
 }
 
-
-.form-container, .item-list {
+.form-container,
+.item-list {
   padding: 2rem;
 }
 
-input, textarea, select{
+input,
+textarea,
+select {
   display: block;
   margin: 10px 0;
   padding: 10px;
   width: 100%;
+  background: white;
+  color: #222;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+body.dark input,
+body.dark textarea,
+body.dark select {
+  background: #2a2a2a;
+  color: white;
+  border: 1px solid #555;
 }
 
 .success-msg {
@@ -89,38 +101,53 @@ input, textarea, select{
 
 .modal {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.6);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
-.modal-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
+
 .modal-content {
   background: white;
+  color: black;
   padding: 2rem;
   width: 90%;
   max-width: 600px;
   position: relative;
   border-radius: 10px;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+body.dark .modal-content {
+  background: #2c2c2c;
+  color: white;
 }
 
 .modal-content img {
-  max-height: 300px;
+  max-height: 250px;
   object-fit: contain;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .close-btn {
   position: absolute;
-  top: 10px; right: 10px;
+  top: 10px;
+  right: 10px;
   cursor: pointer;
   font-size: 1.5rem;
+  color: inherit;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
 
 .enquire-btn {
@@ -130,7 +157,13 @@ input, textarea, select{
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  transition: background 0.3s ease;
 }
+
+.enquire-btn:hover {
+  background: #0056b3;
+}
+
 .delete-btn {
   background: crimson;
   color: white;
@@ -138,4 +171,9 @@ input, textarea, select{
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: darkred;
 }
