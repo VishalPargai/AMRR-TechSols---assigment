@@ -7,7 +7,6 @@ body {
   color: #222;
   transition: background 0.4s ease, color 0.4s ease;
   font-family: "Poppins", sans-serif;
-  overflow: hidden;
 }
 
 
@@ -139,9 +138,4 @@ input, textarea, select{
   border: none;
   cursor: pointer;
   border-radius: 5px;
-}
-.credits{
-    position: relative;
-    top: 83vh;
-    left: 86.5vw;
 }

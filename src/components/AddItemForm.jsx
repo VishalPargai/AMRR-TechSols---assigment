@@ -26,7 +26,7 @@ function AddItemForm({ items, setItems, setSuccess }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>     
     </form>
   );
 }

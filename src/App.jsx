@@ -53,8 +53,7 @@ function App() {
             {theme === 'light' ? <MdDarkMode/> : <MdLightMode/>}
           </button>
 
-          <p className='credits'>MADE BY - VISHAL PARGAI</p>
-
+          
         <Routes>
           <Route
             path="/"
